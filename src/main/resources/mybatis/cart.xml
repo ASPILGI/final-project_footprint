@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+ 
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.study.cart.CartMapper">
+
+	<insert id="fcreate" parameterType="com.study.cart.CartDTO">
+		insert into cart1(cartno, lat, lng, foodno, bname, phone, id, fname)
+		values((select nvl(max(cartno),0)+1 from cart1),
+		(select lat from food where foodno = #{foodno}), (select lng from food where foodno = #{foodno}), #{foodno}, 
+		(select foodname from food where foodno = #{foodno}),
+		(select phone from food where foodno = #{foodno}),
+		#{id}, (select fname from food where foodno = #{foodno}) )
+	</insert>
+
+	<insert id="tcreate" parameterType="com.study.cart.CartDTO">
+		insert into cart1(cartno, lat, lng, travelno, bname, phone, id, fname)
+		values((select nvl(max(cartno),0)+1 from cart1),
+		#{lat}, #{lng}, #{travelno}, 
+		(select travelname from travel where travelno = #{travelno}),
+		(select phone from travel where travelno = #{travelno}),
+		#{id}, (select fname from travel where travelno = #{travelno}))
+	</insert>
+	
+	<!-- tlist -->
+	<select id="tlist" parameterType="Map"
+		resultType="com.study.cart.CartDTO">
+		select * from cart1 
+		where id = #{id}
+		and travelno is not null
+	</select>
+	<!-- flist -->
+	<select id="flist" parameterType="Map"
+		resultType="com.study.cart.CartDTO">
+		select * from cart1 
+		where id = #{id}
+		and foodno is not null
+	</select>
+	<select id="list" parameterType="Map"
+      resultType="com.study.cart.CartDTO">
+      select * from cart1 
+      where id = #{id}
+   </select>
+	<delete id="delete" parameterType="int">
+    DELETE FROM cart1
+    WHERE cartno=#{cartno}
+ 	</delete>  
+
+</mapper>
