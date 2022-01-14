@@ -1,6 +1,6 @@
 # 발자국[footprint]
 
-<img src = "https://user-images.githubusercontent.com/84302546/149454115-1efc90da-396b-4056-a762-df17d95a6e55.png" width="600px" height="400px"> <img src = "https://user-images.githubusercontent.com/84302546/149459150-15b866da-5b5e-4c47-bffd-96b3a5c9bb93.png" height="400px">
+<img src = "https://user-images.githubusercontent.com/84302546/149454115-1efc90da-396b-4056-a762-df17d95a6e55.png" width="500px" height="400px"> <img src = "https://user-images.githubusercontent.com/84302546/149459150-15b866da-5b5e-4c47-bffd-96b3a5c9bb93.png" height="400px">
 
 ## 프로젝트 요약
 > 개발 기간 : 2021.10.29 ~ 2021.12.03 (약 5주)
