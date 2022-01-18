@@ -19,6 +19,10 @@
 * 여행지와 맛집을 저장하여 일정표를 만들고 싶은 사람들을 위해 기획하였습니다.
 * 사용자가 맛집과 여행지를 즐겨찾기에 등록한 후에 여행기간에 맞춰 일정표를 만들수 있습니다.
 
+## 요구사항 분석
+
+<img src = "https://user-images.githubusercontent.com/84302546/149879575-a7a6df96-1d86-45ad-a882-d03a80f8d5b6.PNG" width="700px" height="500px"> 
+
 ## 담당 역할
 
 ### Template
